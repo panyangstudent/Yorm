@@ -1,6 +1,5 @@
-# panYang-Yorm
+# Yorm
 7天实现orm
-
 
 # 前言
 作为一名程序猿，相信没有人不对orm熟悉。orm作为桥梁，连接了高级编程语言和关系型数据库。在一个全新的项目中当考虑到操作数据库时，相信大多数人都会选择orm。一方面orm为我们带来了便捷，安全等好处，但是大多数时候应该是因为懒和原生sql的开发效率过低问题，哈哈哈哈。
@@ -1168,6 +1167,4 @@ if u.GroupParam != "" {
 
 
 
-参考博客：
-https://www.modb.pro/db/225534
-https://geektutu.com/post/geeorm.html
+# mysql代码模板生成
