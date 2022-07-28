@@ -28,6 +28,11 @@ func TestInsertUser(t *testing.T) {
 	log.Println(fmt.Sprintf("TestInsertUser InsertUser resp id : %v err : %v", id, err))
 }
 
+func TestFindForTemplate(t *testing.T)  {
+	columnTypeAndName, err := dao.SelectTableForTemplate(dao.TableNameUserInfo)
+	log.Println(fmt.Sprintf("TestInsertUser InsertUser resp id : %v err : %v", columnTypeAndName, err))
+}
+
 func TestOrder(t *testing.T) {
 	log.Println(fmt.Sprintf("TestOrder order resp err : %v", dao.Order()))
 	return

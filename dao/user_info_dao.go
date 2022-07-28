@@ -9,6 +9,15 @@ import (
 
 const TableNameUserInfo = "user_info"
 
+
+
+func SelectTableForTemplate(tableName string) (columnTypeAndName map[string]string, err error) {
+	dbInterface := yorm.NewDBInstance()
+	columnTypeAndName, err = dbInterface.SetTable(tableName).Limit(1).FindForTemplate()
+	return
+}
+
+
 func InsertUser(info model.UserInfo) (id int64, err error) {
 	dbInstance := yorm.NewDBInstance()
 	if id, err = dbInstance.SetTable(TableNameUserInfo).Insert(info); err != nil {
@@ -17,7 +26,6 @@ func InsertUser(info model.UserInfo) (id int64, err error) {
 	}
 	return
 }
-
 func Where()  {
 	dbInstance := yorm.NewDBInstance()
 	dbInstance.Where("id", "=", 1).Where("id", "in", []int64{1, 2, 3, 4})

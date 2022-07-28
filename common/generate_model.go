@@ -1,16 +1,12 @@
 package common
 
 import (
-	"OrmIsImplementedIn7Days/yorm"
 	"os"
 	"text/template"
 )
 
-func selectTable(tableName string)  {
-	dbInterface := yorm.NewDBInstance()
-	dbInterface.SetTable(tableName)
-}
 func Generate(tableName string)  {
+
 	tmpl , err := template.New("test").Parse(`hello {{.name}}!obj:{{.}}`)
 	if err != nil {
 		panic(err)
@@ -20,4 +16,13 @@ func Generate(tableName string)  {
 	if err != nil {
 		panic(err)
 	}
+}
+
+func genTemplate() string {
+	codeTemplate := `
+	type {{.tableName}} struct {
+		
+	}
+	`
+	return codeTemplate
 }
