@@ -27,7 +27,7 @@ type YEngine struct {
 	tx            *sql.Tx
 }
 
-const FirstWhere = "where ( "
+const FirstWhere = " where ( "
 
 func (y *YEngine) setError(err error) error {
 	return errors.New(fmt.Sprintf("db error : %v", err))

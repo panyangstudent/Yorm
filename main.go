@@ -25,6 +25,9 @@ func main() {
 	}
 
 	// 生成模板
-	common.Generate(params[1])
-	fmt.Println("struct模板已生成，请移步model目录\ndao方法已生成，请移步dao目录 ")
+	err  = common.Generate(params[1])
+	if err != nil {
+		return
+	 }
+	fmt.Println("\n\n\n\nsuccess\nstruct模板已生成")
 }

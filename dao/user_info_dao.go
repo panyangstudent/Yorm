@@ -26,19 +26,3 @@ func InsertUser(info model.UserInfo) (id int64, err error) {
 	}
 	return
 }
-func Where()  {
-	dbInstance := yorm.NewDBInstance()
-	dbInstance.Where("id", "=", 1).Where("id", "in", []int64{1, 2, 3, 4})
-}
-func SelectUsers() (userList []model.UserInfo, err error) {
-	return
-}
-
-func UpdateUserInfo() (err error) {
-	return
-}
-func Order() (err error) {
-	dbInstance := yorm.NewDBInstance()
-	dbInstance.Order("id","desc","uid","acs")
-	return
-}

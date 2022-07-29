@@ -21,7 +21,7 @@ func (y *YEngine) Find(result interface{}) (err error) {
 	// 拼接sql
 	y.prePare = "select " + y.fieldParam + " from " + y.GetTableName()
 
-	if y.whereParam != "" {
+	if y.whereParam != FirstWhere {
 		y.prePare += y.whereParam + " ) "
 	}
 
